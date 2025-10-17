@@ -1,4 +1,5 @@
-solution
-*/input.txt
-*/output.txt
-
+Problems/*solution*
+**/input.txt
+**/output.txt
+tmp/
+*.tmp.*

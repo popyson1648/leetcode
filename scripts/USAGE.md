@@ -1,19 +1,3 @@
-## `create.py`
-
-ステップファイル (`step1.ext` など) を生成します。
-
-**Usage:** `python scripts/create.py <step> <ext> [pattern]`
-
-| 引数        | 説明                                               |
-| :---------- | :------------------------------------------------- |
-| `<step>`    | ステップ番号 (`1`, `2`, `3`) または `all`。        |
-| `<ext>`     | ファイルの拡張子 (例: `py`, `ts`)。                |
-| `[pattern]` | (任意) 対象ディレクトリのglobパターン。            |
-
-**Example:** `python scripts/create.py 1 py`
-
----
-
 ## `insert.py`
 
 `solution` ファイルにステップヘッダーを挿入します。
@@ -27,7 +11,22 @@
 
 **Example:** `python scripts/insert.py 1 ./problem-1`
 
----
+
+## `solved.py`
+
+`solution` ファイルからLeetCode特有のコメントを削除します。
+
+**Usage:** `python scripts/solved.py <step> <ext> <dest> [-any <name>]`
+
+| 引数          | 説明                                     |
+| :------------ | :--------------------------------------- |
+| `<step>`      | 出力ファイル名のステップ番号 (`1`, `2`, `3`)。 |
+| `<ext>`       | 出力ファイルの拡張子。                   |
+| `<dest>`      | 保存先のディレクトリ。                   |
+| `[-any <name>]` | (任意) 任意のファイル名を指定。          |
+
+**Example:** `python scripts/solved.py 1 py .`
+
 
 ## `pr.py`
 
@@ -49,20 +48,17 @@
 
 **Example:** `python scripts/pr.py 'problems/001-two-sum'`
 
----
 
-## `solved.py`
+## `create.py`
 
-`solution` ファイルからLeetCode特有のコメントを削除します。
+ステップファイル (`step1.ext` など) を生成します。
 
-**Usage:** `python scripts/solved.py <step> <ext> <dest> [-any <name>]`
+**Usage:** `python scripts/create.py <step> <ext> [pattern]`
 
-| 引数          | 説明                                     |
-| :------------ | :--------------------------------------- |
-| `<step>`      | 出力ファイル名のステップ番号 (`1`, `2`, `3`)。 |
-| `<ext>`       | 出力ファイルの拡張子。                   |
-| `<dest>`      | 保存先のディレクトリ。                   |
-| `[-any <name>]` | (任意) 任意のファイル名を指定。          |
+| 引数        | 説明                                               |
+| :---------- | :------------------------------------------------- |
+| `<step>`    | ステップ番号 (`1`, `2`, `3`) または `all`。        |
+| `<ext>`     | ファイルの拡張子 (例: `py`, `ts`)。                |
+| `[pattern]` | (任意) 対象ディレクトリのglobパターン。            |
 
-**Example:** `python scripts/solved.py 1 py .`
-
+**Example:** `python scripts/create.py 1 py`
